@@ -1,0 +1,11 @@
+let promessa = Promise.resolve (5)
+//console.log (promessa)
+console.log ("Mais códigos")
+promessa.then ((value) => {return value+5})
+    .then ((value) => {console.log (value)})
+
+let promessa2 = Promise.resolve (new Error ("Deu erro"))
+//console.log (promessa2)
+console.log ("Mais códigos")
+promessa2.then (value => console.log (value))
+    .catch (reason => console.log ("Falhou" + reason))
